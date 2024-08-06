@@ -52,11 +52,11 @@ export default function JobPost() {
     }
 
     const result = await createJobPost(formData);
+    // if (result?.isTokenInValid) {
+    //   localStorage.clear();
+    //   navigate("/login");
+    // }
     navigate("/");
-    if (result?.isTokenInValid) {
-      localStorage.clear();
-      navigate("/login");
-    }
   };
 
   const addSkills = (event) => {
@@ -177,6 +177,7 @@ export default function JobPost() {
             value={formData.locationType}
             onChange={handleChange}
           >
+            <option value="">Select location type</option>
             <option value="Remote">Remote</option>
             <option value="Office">Office</option>
           </select>
