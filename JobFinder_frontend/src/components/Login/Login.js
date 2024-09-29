@@ -33,7 +33,8 @@ export default function Login() {
         // value={formData.email}
         onChange={handleFormChange}
         type={"email"}
-        placeholder="guest@gmail.com"
+        placeholder="Email"
+        value="guest@gmail.com"
       ></input>
       <input
         className={styles.input}
@@ -41,7 +42,8 @@ export default function Login() {
         // value={formData.password}
         onChange={handleFormChange}
         type={"password"}
-        placeholder="guest@123"
+        placeholder="password"
+        value="guest@123"
       ></input>
       <button onClick={handleSubmit} className={styles.button}>
         Sign in
