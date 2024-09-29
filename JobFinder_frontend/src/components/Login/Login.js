@@ -5,7 +5,10 @@ import { useNavigate } from "react-router-dom";
 
 export default function Login() {
   const navigate = useNavigate();
-  const [formData, setFormData] = useState({ email: "", password: "" });
+  const [formData, setFormData] = useState({
+    email: "guest@gmail.com",
+    password: "guest@123",
+  });
 
   const handleFormChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
@@ -30,20 +33,18 @@ export default function Login() {
       <input
         className={styles.input}
         name="email"
-        // value={formData.email}
+        value={formData.email}
         onChange={handleFormChange}
         type={"email"}
         placeholder="Email"
-        value="guest@gmail.com"
       ></input>
       <input
         className={styles.input}
         name="password"
-        // value={formData.password}
+        value={formData.password}
         onChange={handleFormChange}
         type={"password"}
         placeholder="password"
-        value="guest@123"
       ></input>
       <button onClick={handleSubmit} className={styles.button}>
         Sign in
