@@ -13,7 +13,7 @@ export const registerUser = async ({ email, password, mobile, name }) => {
     return;
   } catch (error) {
     console.log(error);
-    alert("Something went wrong");
+    alert("register : Something went wrong");
   }
 };
 
@@ -32,6 +32,6 @@ export const loginUser = async ({ email, password }) => {
     return true;
   } catch (error) {
     console.log(error);
-    alert("Something went wrong");
+    alert("login : Something went wrong");
   }
 };

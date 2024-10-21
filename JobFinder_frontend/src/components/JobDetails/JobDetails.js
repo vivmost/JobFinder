@@ -37,7 +37,9 @@ export default function JobDetails() {
       {jobDetails ? (
         <div className={styles.body}>
           <div className={styles.nav}>
-            <p className={styles.navText}>Jobfinder</p>
+            <p onClick={() => navigate("/")} className={styles.navText}>
+              Jobfinder
+            </p>
             <div className={styles.btnGrp}>
               {isLoggedIn ? (
                 <button onClick={logout} className={styles.register}>
