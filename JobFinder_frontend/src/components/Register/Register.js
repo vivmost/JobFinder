@@ -40,7 +40,6 @@ export default function Register() {
   return (
     <div className={styles.container}>
       <h1 className={styles.h1}>Create an account</h1>
-      <h2 className={styles.h2}>Your personal job finder is here</h2>
       <input
         className={styles.input}
         name="name"
